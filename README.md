@@ -1,1 +1,1 @@
-# jr-rails
+[![Build Status](https://travis-ci.org/wolox-training/jr-rails.svg?branch=travis)](https://travis-ci.org/wolox-training/jr-rails)
