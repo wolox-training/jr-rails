@@ -40,6 +40,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rubocop', '~> 0.58.2', require: false
+  gem 'devise', '~> 4.5'
 end
 
 group :development do
