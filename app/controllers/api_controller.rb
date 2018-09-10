@@ -1,4 +1,3 @@
-# app/controllers/api_controller.rb
 class ApiController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :render_nothing_bad_req
   rescue_from ActiveRecord::RecordNotFound, with: :render_nothing_bad_req

@@ -4,9 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # app/models/user.rb
-  # ...
-  # Hooks
   before_validation :generate_verification_code, on: :create
 
   def generate_verification_code

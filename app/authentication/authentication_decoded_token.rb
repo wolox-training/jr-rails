@@ -1,4 +1,3 @@
-# app/authentication/authentication_decoded_token.rb
 class AuthenticationDecodedToken < HashWithIndifferentAccess
   def expired?
     return false if self[:expiration_date].blank?

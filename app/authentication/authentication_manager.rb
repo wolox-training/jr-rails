@@ -1,4 +1,3 @@
-# app/authentication/authentication_manager.rb
 class AuthenticationManager
   NOT_AUTH_CODE = 1
   TOKEN_EXPIRED_CODE = 2
