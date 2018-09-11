@@ -47,6 +47,7 @@ group :development, :test do
   gem 'devise', '~> 4.5'
   gem 'rspec-rails', '~> 3.8'
   gem 'faker', '~> 1.9', '>= 1.9.1'
+  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
 end
 
 group :development do
@@ -59,8 +60,8 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner'
-  gem 'factory_bot', '~> 4.11', '>= 4.11.1'
+  gem 'database_cleaner', '~> 1.7.0'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
