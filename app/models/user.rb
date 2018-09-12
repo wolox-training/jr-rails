@@ -9,4 +9,6 @@ class User < ApplicationRecord
   def generate_verification_code
     self.verification_code = AuthenticableEntity.verification_code
   end
+
+  has_many :rents, dependent: :destroy
 end
