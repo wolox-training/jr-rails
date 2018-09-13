@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :rent do
-    user_id { nil }
-    book_id { nil }
-    from { "2018-09-11" }
-    to { "2018-09-11" }
+    user
+    book
+    from { Time.zone.now.to_date }
+    to { Faker::Date.between(Time.zone.now.to_date, 1.month.from_now) }
   end
 end

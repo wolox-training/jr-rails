@@ -1,5 +1,36 @@
 require 'rails_helper'
 
-RSpec.describe Rent, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe Rent do
+  it do
+    should belong_to(:user)
+  end
+
+  it do
+    should belong_to(:book)
+  end
+
+  it do
+    should validate_presence_of(:from)
+  end
+
+  it do
+    should validate_presence_of(:to)
+  end
+
+  subject(:rent) do
+    described_class.new(
+      user: user, book: book, from: from, to: to
+    )
+  end
+
+  let(:user) { create(:user) }
+
+  let(:book) { create(:book) }
+
+  let(:from) { Time.zone.now.to_date }
+
+  let(:to) { Faker::Date.between(Time.zone.now.to_date, 1.month.from_now) }
+
+
+  it { is_expected.to be_valid }
 end
