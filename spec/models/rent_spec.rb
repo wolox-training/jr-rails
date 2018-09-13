@@ -9,14 +9,6 @@ RSpec.describe Rent do
     should belong_to(:book)
   end
 
-  it do
-    should validate_presence_of(:from)
-  end
-
-  it do
-    should validate_presence_of(:to)
-  end
-
   subject(:rent) do
     described_class.new(
       user: user, book: book, from: from, to: to
