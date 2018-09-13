@@ -1,4 +1,4 @@
 class Rent < ApplicationRecord
-  belongs_to :user, presence: true
-  belongs_to :book, presence: true
+  belongs_to :user, required: true
+  belongs_to :book, required: true
 end
