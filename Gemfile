@@ -48,6 +48,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
+  gem 'active_model_serializers', '~> 0.10.0'
+  gem 'wor-paginate'
 end
 
 group :development do
