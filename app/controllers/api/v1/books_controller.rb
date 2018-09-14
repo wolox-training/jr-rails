@@ -3,7 +3,7 @@ module Api
     class BooksController < ApiController
       include Wor::Paginate
       def index
-        render_paginated BooksController
+        render_paginated BookModel
       end
 
       def show
