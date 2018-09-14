@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Rent do
+describe Rent do
   it do
     should belong_to(:user)
   end
