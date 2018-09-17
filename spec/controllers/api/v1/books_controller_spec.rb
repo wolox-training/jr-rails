@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Api::V1::BooksController, type: :controller do
-
+  include_context 'Authenticated User'
   describe "GET #index" do
     context 'When fetching all the books' do
       let!(:books) { create_list(:book, 3) }
@@ -12,7 +12,7 @@ describe Api::V1::BooksController, type: :controller do
 
       it 'responses with the users rents json' do
         expected = ActiveModel::Serializer::CollectionSerializer.new(
-          books, each_serializer: RentSerializer
+          books, each_serializer: BookSerializer
         ).to_json
         expect(response_body.to_json) =~ JSON.parse(expected)
       end
@@ -32,7 +32,7 @@ describe Api::V1::BooksController, type: :controller do
       end
 
       it 'responses with the book json' do
-        expect(response_body.to_json).to eq RentSerializer.new(
+        expect(response_body.to_json).to eq BookSerializer.new(
           book, root: false
         ).to_json
       end
