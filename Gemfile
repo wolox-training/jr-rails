@@ -37,6 +37,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'versionist'
 gem 'jwt'
 
+gem 'devise', '~> 4.5'
+gem 'wor-paginate'
+gem 'active_model_serializers', '~> 0.10.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -44,12 +48,9 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rubocop', '~> 0.58.2', require: false
-  gem 'devise', '~> 4.5'
   gem 'rspec-rails', '~> 3.8'
   gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
-  gem 'active_model_serializers', '~> 0.10.0'
-  gem 'wor-paginate'
 end
 
 group :development do
