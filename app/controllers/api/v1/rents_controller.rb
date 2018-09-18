@@ -10,18 +10,16 @@ module Api
         rent = Rent.new(rent_params)
 
         if rent.save
-          render json: { message: 'The rent was created successfully',
-                         data: rent }
+          render json: rent
         else
-          render json: { message: "The rent wasn't created, an error aborted the operation",
-                         data: rent.errors }
+          render json: { error: "The rent wasn't saved" }, status: :unprocessable_entity
         end
       end
 
       private
 
       def rent_params
-        params.permit(:user_id, :book_id, :from, :to)
+        params.require(:rent).permit(:user_id, :book_id, :from, :to)
       end
     end
   end
