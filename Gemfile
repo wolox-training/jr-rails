@@ -40,6 +40,7 @@ gem 'jwt'
 gem 'devise', '~> 4.5'
 gem 'wor-paginate'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'sidekiq', '~> 5.2', '>= 5.2.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -51,6 +52,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
+  gem 'dotenv-rails'
 end
 
 group :development do

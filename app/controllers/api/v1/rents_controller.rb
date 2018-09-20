@@ -6,7 +6,7 @@ module Api
         render_paginated Rent
       end
 
-      def create
+      def create        
         rent = Rent.new(rent_params)
 
         if rent.save

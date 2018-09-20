@@ -19,3 +19,4 @@
 .byebug_history
 /test
 .DS_store
+.env

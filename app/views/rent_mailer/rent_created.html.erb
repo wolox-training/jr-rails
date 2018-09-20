@@ -1,0 +1,17 @@
+<h1 style='color: green'>A new rent was created!</h1>
+
+<p>
+  <h2>Dear customer <b style='color: blue'><%= @user_renting.first_name+' '+@user_renting.last_name %>,</b></h2>
+  <br>
+  Your rent of the book <b><%= @book_rented.title %></b> has been created at <b><%= Time.zone.now %></b>
+  <br>
+  <br>
+  Here is the data of your book rented:<br>
+  <b>Title:</b> <%= @book_rented.title %><br>
+  <b>Genre:</b> <%= @book_rented.genre %><br>
+  <b>Author:</b> <%= @book_rented.author %><br>
+  <b>Publisher:</b> <%= @book_rented.publisher %><br>
+  <b>Year:</b> <%= @book_rented.year %><br>
+  <br><br>
+  The rent will be available from <b><%= @rent.from %></b> to <b><%= @rent.to %></b>
+</p>
