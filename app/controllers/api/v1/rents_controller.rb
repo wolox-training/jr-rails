@@ -11,6 +11,7 @@ module Api
 
         if rent.save
           render json: rent
+          RentMailer.rent_created(rent.id).deliver_later
         else
           render json: { error: "The rent wasn't saved" }, status: :unprocessable_entity
         end
