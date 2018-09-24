@@ -4,6 +4,11 @@ class RentMailer < ApplicationMailer
   #
   #   en.rent_mailer.rent_created.subject
   #
+
+  I18n.with_locale(:es) do
+   I18n.locale #=> :es
+  end
+
   def rent_created(rent_id)
     @rent = Rent.find(rent_id)
     mail to: @rent.user.email

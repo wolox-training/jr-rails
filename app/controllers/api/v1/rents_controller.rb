@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class RentsController < ApiController
@@ -6,7 +8,7 @@ module Api
         render_paginated Rent
       end
 
-      def create        
+      def create
         rent = Rent.new(rent_params)
 
         if rent.save
