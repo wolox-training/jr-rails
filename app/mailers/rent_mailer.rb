@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RentMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -6,7 +8,7 @@ class RentMailer < ApplicationMailer
   #
 
   I18n.with_locale(:es) do
-   I18n.locale #=> :es
+    I18n.locale #=> :es
   end
 
   def rent_created(rent_id)
