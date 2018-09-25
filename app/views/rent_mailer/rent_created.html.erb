@@ -1,17 +1,17 @@
-<h1 style='color: green'>A new rent was created!</h1>
+<h1 style='color: green'><%= t :title %></h1>
 
 <p>
-  <h2>Dear customer <b style='color: blue'><%= "#{@rent.user.first_name} #{@rent.user.last_name}" %>,</b></h2>
+  <h2><%= t :greetings %> <b style='color: blue'><%= "#{@rent.user.first_name} #{@rent.user.last_name}" %>,</b></h2>
   <br>
-  Your rent of the book <b><%= @rent.book.title %></b> has been created at <b><%= @rent.created_at %></b>
+  <%= t :information %> <b><%= @rent.book.title %></b> <%= t :has_been_created %> <b><%= @rent.created_at %></b>
   <br>
   <br>
-  Here is the data of your book rented:<br>
-  <b>Title:</b> <%= @rent.book.title %><br>
-  <b>Genre:</b> <%= @rent.book.genre %><br>
-  <b>Author:</b> <%= @rent.book.author %><br>
-  <b>Publisher:</b> <%= @rent.book.publisher %><br>
-  <b>Year:</b> <%= @rent.book.year %><br>
+  <%= t :book_summary %><br>
+  <b><%= t :book_title %></b> <%= @rent.book.title %><br>
+  <b><%= t :genre %></b> <%= @rent.book.genre %><br>
+  <b><%= t :author %></b> <%= @rent.book.author %><br>
+  <b><%= t :publisher %></b> <%= @rent.book.publisher %><br>
+  <b><%= t :year %></b> <%= @rent.book.year %><br>
   <br><br>
-  The rent will be available from <b><%= @rent.from %></b> to <b><%= @rent.to %></b>
+  <%= t :rent_available %> <b><%= @rent.from %></b> - <b><%= @rent.to %></b>
 </p>

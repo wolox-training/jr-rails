@@ -1,0 +1,12 @@
+es:
+  title: "Una nueva renta ha sido creada!"
+  greetings: "Apreciado cliente "
+  information: "Tu renta del libro "
+  has_been_created: "ha sido creada en: "
+  book_summary: "A continuación el resumen del libro que rentaste:"
+  book_title: "Título: "
+  genre: "Género: "
+  author: "Autor: "
+  publisher: "Editorial: "
+  year: "Año de publicación: "
+  rent_available: "La renta estará disponible en el siguiente rango de fechas: "
