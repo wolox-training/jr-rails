@@ -9,6 +9,7 @@ module Api
       after_action :verify_authorized
       def index
         render_paginated Rent
+        authorize @rent
       end
 
       def create
