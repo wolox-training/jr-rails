@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticationManager
   NOT_AUTH_CODE = 1
   TOKEN_EXPIRED_CODE = 2
@@ -64,11 +66,11 @@ class AuthenticationManager
   end
 
   def auth_token_warning_expiration_date_reached?
-    decoded_auth_token && decoded_auth_token.warning_expiration_date_reached?
+    decoded_auth_token&.warning_expiration_date_reached?
   end
 
   def auth_token_expired?
-    decoded_auth_token && decoded_auth_token.expired?
+    decoded_auth_token&.expired?
   end
 
   def authorization_header

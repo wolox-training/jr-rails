@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticationUniqueToken
   class << self
     # I'm not checking the uniqueness because its unlikely to happen

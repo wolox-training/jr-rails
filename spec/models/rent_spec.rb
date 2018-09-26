@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe Rent do
@@ -22,7 +24,6 @@ describe Rent do
   let(:from) { Time.zone.now.to_date }
 
   let(:to) { Faker::Date.between(Time.zone.now.to_date, 1.month.from_now) }
-
 
   it { is_expected.to be_valid }
 end

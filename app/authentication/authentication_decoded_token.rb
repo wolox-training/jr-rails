@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticationDecodedToken < HashWithIndifferentAccess
   def expired?
     return false if self[:expiration_date].blank?

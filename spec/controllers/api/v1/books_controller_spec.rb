@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe Api::V1::BooksController, type: :controller do
   include_context 'Authenticated User'
-  describe "GET #index" do
+  describe 'GET #index' do
     context 'When fetching all the books' do
       let!(:books) { create_list(:book, 3) }
 
@@ -42,5 +44,4 @@ describe Api::V1::BooksController, type: :controller do
       end
     end
   end
-
 end

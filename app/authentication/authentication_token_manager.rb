@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticationTokenManager
   class << self
     def encode(payload)

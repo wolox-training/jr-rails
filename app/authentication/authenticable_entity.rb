@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthenticableEntity
   MAXIMUM_USEFUL_DATES     = 30.days
   EXPIRATION_DATES         = 2.days

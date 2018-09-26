@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe Book do
@@ -44,7 +46,5 @@ describe Book do
 
   let(:year) { Faker::Number.between(1900, 2018) }
 
-
   it { is_expected.to be_valid }
-
 end
