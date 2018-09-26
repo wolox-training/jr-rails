@@ -4,12 +4,9 @@ module Api
   module V1
     class RentsController < ApiController
       include Wor::Paginate
-      before_action :authenticate_user!
-
-      after_action :verify_authorized
       def index
-        render_paginated Rent
         authorize @rent
+        render_paginated Rent
       end
 
       def create
