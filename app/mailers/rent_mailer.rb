@@ -8,9 +8,8 @@ class RentMailer < ApplicationMailer
   #
 
   def rent_created(rent_id)
-    I18n.with_locale(:es) do
-      I18n.locale #=> :es
-      @rent = Rent.find(rent_id)
+    @rent = Rent.find(rent_id)
+    I18n.with_locale(@rent.user.locale) do
       mail to: @rent.user.email
     end
   end
