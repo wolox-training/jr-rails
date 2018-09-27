@@ -11,7 +11,7 @@ module Api
         if suggestion.save
           render json: suggestion, status: :created
         else
-          render json: { error: "The suggestion wasn't created" }, status: :unprocessable_entity
+          render json: { error: suggestion.errors }, status: :unprocessable_entity
         end
       end
 
