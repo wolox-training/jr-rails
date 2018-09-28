@@ -5,8 +5,8 @@ module Api
     class RentsController < ApiController
       include Wor::Paginate
       def index
-        authorize @rent
-        render_paginated Rent
+        rents = policy_scope(Rent)
+        render_paginated rents
       end
 
       def create
