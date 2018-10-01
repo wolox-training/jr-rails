@@ -3,11 +3,10 @@ require 'rails_helper'
 describe Api::V1::BookSuggestionsController, type: :controller do
   describe 'POST #create' do
     context 'When creating a valid book suggestion' do
-      let!(:new_book_suggestion_attributes) { attributes_for(:book_suggestion) }
+      let!(:new_book_suggestion_attributes) { create(:book_suggestion).attributes }
       it 'creates a new book suggestion' do
         expect do
           post :create, params: { book_suggestion: new_book_suggestion_attributes }
-          byebug
         end.to change { BookSuggestion.count }.by(1)
       end
 
@@ -18,7 +17,7 @@ describe Api::V1::BookSuggestionsController, type: :controller do
     end
 
     context 'When creating an invalid book suggestion' do
-      let!(:new_book_suggestion_attributes) { attributes_for(:book_suggestion) }
+      let!(:new_book_suggestion_attributes) { create(:book_suggestion).attributes }
       before do
         post :create, params: { book_suggestion: new_book_suggestion_attributes }
       end
