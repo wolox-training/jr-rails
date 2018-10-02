@@ -17,7 +17,8 @@ describe Api::V1::BookSuggestionsController, type: :controller do
     end
 
     context 'When creating an invalid book suggestion' do
-      let!(:new_book_suggestion_attributes) { create(:book_suggestion).attributes }
+
+      let!(:new_book_suggestion_attributes) { attributes_for(:book_suggestion) }
       before do
         post :create, params: { book_suggestion: new_book_suggestion_attributes }
       end
